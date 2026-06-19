@@ -26,6 +26,7 @@ class DepartmentControllerTest {
         return new DepartmentController(departmentService);
     }
 
+
     @Test
     void getAllDepartment_delegatesToService() {
         List<Department> data = Arrays.asList(new Department(), new Department());
@@ -33,6 +34,9 @@ class DepartmentControllerTest {
 
         assertThat(controller().getAllDepartment()).hasSize(2);
     }
+
+
+
 
     @Test
     void getDepartment_delegatesToService() {

@@ -28,6 +28,7 @@ class EnrollmentControllerTest {
         return new EnrollmentController(enrollmentService);
     }
 
+
     @Test
     void getAllEnrollment_delegatesToService() {
         List<Enrollment> data = Arrays.asList(new Enrollment(), new Enrollment());
@@ -35,6 +36,7 @@ class EnrollmentControllerTest {
 
         assertThat(controller().getAllEnrollment()).hasSize(2);
     }
+
 
     @Test
     void getEnrollment_delegatesToService() {

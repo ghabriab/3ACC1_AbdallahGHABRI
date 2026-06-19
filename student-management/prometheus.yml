@@ -8,3 +8,8 @@ scrape_configs:
       - targets: ['192.168.49.2:30089']
         labels:
           application: 'student-management'
+
+  - job_name: 'jenkins'
+    metrics_path: '/prometheus/'
+    static_configs:
+      - targets: ['10.0.2.15:8080']
